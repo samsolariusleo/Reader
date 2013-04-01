@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='UTF-8' />
+		<title>What's New?</title>
+		<!-- JQM Structure -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" />
+		<link rel="stylesheet" href="static/js/jquery.mobile-1.3.0.min.css" />
+		<link rel="stylesheet" href="static/js/jquery.mobile.structure-1.3.0.min.css" />
+		<!-- JQM Custom Theme -->
+		<link rel="stylesheet" href="static/js/jquery.mobile.theme-1.3.0.min.css" />
+		<!-- JQ Core -->
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<!-- JQM -->
+		<script src="static/js/jquery.mobile-1.3.0.min.js"></script>
+
+		<!-- viewport -->
+		<meta name="viewport" content="width=device-width">
+		<!-- iOS stuff -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
+		<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+		<meta http-equiv="cleartype" content="on">
+		<!-- For mobile browsers that do not recognize the viewport tag -->
+		<meta name="MobileOptimized" content="320" />
+	</head>
+	<body>
+		<div data-role='page' data-title="What's New?" id='news'>
+			<header data-role='header'>
+				<h1>News</h1>
+			</header>
+			<div data-role='content'>
+				<ul class='newsfeed' data-role='listview'>
+					<li>
+						<span id='title'></span><br>
+						<span id='link'></span><br>
+						<span id='description'></span>
+					</li>
+				</ul>
+				<script>
+					var news = 
+
+					var obj = eval ("(" + news + ")");
+
+					document.getElementById("title").innerHTML=obj.news[2].title
+					document.getElementById("link").innerHTML=obj.news[2].link 
+					document.getElementById("description").innerHTML=obj.news[0].description
+				</script>
+			</div>
+		</div>
+	</body>
+</html>
